@@ -7,6 +7,42 @@
   pointer-events: none;
 }
 
+.container {
+  padding: 20px;
+}
+
+.logo_style {
+  max-width: 285px;
+  min-width: 200px;
+}
+
+.selectL {
+    background: lightgray !important;
+    border-radius: 34px 0px 0px 34px !important;
+}
+
+.selectR {
+  background: lightgray !important;
+  border-radius: 0px 34px 34px 0px !important;
+}
+
+.container-top {
+  border-top: 1px solid lightgrey;
+}
+
+.button {
+  background: rgb(37 93 87) !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.textbox {
+  border-radius: 2px;
+  border: 1px solid;
+}
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -25,7 +61,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color:red;
 }
 
 @keyframes App-logo-spin {
