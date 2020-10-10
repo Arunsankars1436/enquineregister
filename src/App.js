@@ -23,7 +23,7 @@ function App() {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={6} xl={6} sm={6} md={6} lg={6}>
+      <Grid item xs={6} xl={6} sm={12} md={12} lg={6}>
         <Search
           selectPosition={selectPosition}
           position={position}
@@ -31,7 +31,7 @@ function App() {
           setResult={setResult}
           />
       </Grid>
-      <Grid item xs={6} xl={6} sm={6} md={6} lg={6} style={{
+      <Grid item xs={6} xl={6} sm={12} md={12} lg={6} style={{
             overflow: "hidden",
             height: "100vh"
       }}>

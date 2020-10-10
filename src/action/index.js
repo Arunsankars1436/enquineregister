@@ -1,4 +1,3 @@
-import React from 'react';
 import { testData } from './migrated';
 import moment from 'moment';
 import { filter, get } from 'lodash';

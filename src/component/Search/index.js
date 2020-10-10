@@ -61,23 +61,20 @@ function App({
           }));
     }
 
-    const buttonClick = (e) => {
+    const buttonClick = () => {
         setErrors({});
         const fromD = moment(`${get(fromDate, 'yy')}/${get(fromDate, 'mm')}/${get(fromDate, 'dd')}`, DATE_FORMAT, true);
         const toD = moment(`${get(toDate, 'yy')}/${get(toDate, 'mm')}/${get(toDate, 'dd')}`, DATE_FORMAT, true);
         if (
-            ueln_id === ''
-            || isEmpty(fromDate)
-            || isEmpty(toDate)
-            || !toD.isValid()
+            !toD.isValid()
             || !fromD.isValid()
-            || !!find(get(allJSONData, 'equines'), { ueln: ueln_id })
+            || !find(get(allJSONData, 'equines'), { ueln: ueln_id })
         ) {
             if (!toD.isValid()) {
-                errorAction('from', '*Invalid, enter day: DD, month: MM Year: YYYY format'); 
+                errorAction('to', '*Invalid, enter day: DD, month: MM Year: YYYY format'); 
             }
             if (!fromD.isValid()) {
-                errorAction('to', '*Invalid,  enter day: DD, month: MM Year: YYYY format');
+                errorAction('from', '*Invalid,  enter day: DD, month: MM Year: YYYY format');
             }
             if (!find(get(allJSONData, 'equines'), { ueln: ueln_id })) {
                 errorAction('ueln_id', '*Required/Invalid UELN');
@@ -89,7 +86,7 @@ function App({
             errorAction('api', 'No Result Found');
             return;
         }
-        setResult(get(allJSONData, 'equines'));
+        setResult(filteredData);
     }
 
   return (
