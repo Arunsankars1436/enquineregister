@@ -1,5 +1,7 @@
 {
   "name": "equineregister",
+  "author": "arunsankars",
+  "email": "arunsankars001@gmail.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
